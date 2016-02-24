@@ -1,7 +1,7 @@
 Item Catalog
 ------------
 
-A python web applicaiton that utilizes Flask, SQL Alchemy, to create an
+A python web application that utilizes Flask, SQLAlchemy, to create an
 item catalog that users can log into with their Google+ account, via
 it an OAuth2 client.
 
@@ -13,7 +13,7 @@ Steps
 
 1. Follow the steps found [here](https://www.udacity.com/wiki/ud197/install-vagrant) for installing vagrant.
 1. Then clone this repo to a folder you wish to run it from
-1. From the root directotry enter the command: __vagrant up__ (If this is the first time you're doing this, you will need an active internet connection, it couldtake some time.)
+1. From the root directory enter the command: __vagrant up__ (If this is the first time you're doing this, you will need an active internet connection, it could take some time.)
 1. Change directories into */item-catalog*
 1. Connect to the virtual machine with: __vagrant ssh__
 1. Change directories to */vagrant/item-catalog*
