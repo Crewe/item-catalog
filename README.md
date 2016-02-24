@@ -26,19 +26,19 @@ downgrade the follow packages by running the following:
     sudo pip install Flask-Login==0.1.3
 
 1. Now install the PyRSS2Gen library:
-    
-    cd PyRSS2Gen
-    sudo python setup.py install
-    cd ..
 
-1. Next run database_setup.py
-1. then run seed_database.py to add some items to the database
-1. Start up the webserver project.py
-1. navigate to http://localhost:8000
+        cd PyRSS2Gen
+        sudo python setup.py install
+        cd ..
+
+1. Next run __python database_setup.py__
+1. Then run __python seed_database.py__ to add some items to the database
+1. Start up the webserver __python project.py__
+1. Fnially, navigate to [http://localhost:8000](http://localhost:8000)
 
 API Routes:
-* http://localhost:8000/catalog/categories.json
-* http://localhost:8000/catalog/items.json
+* [http://localhost:8000/catalog/categories.json](http://localhost:8000/catalog/categories.json)
+* [http://localhost:8000/catalog/items.json](http://localhost:8000/catalog/items.json)
 
 RSS Feed:
-* http://localhost:8000/catalog/rss.xml
+* [http://localhost:8000/catalog/rss.xml](http://localhost:8000/catalog/rss.xml)
