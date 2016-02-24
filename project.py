@@ -3,9 +3,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Category, Item, User
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+from BaseHTTPServer import HTTPServer
 from flask import Flask, render_template, request, redirect, url_for
-from flask import flash, jsonify, make_response, Markup, escape
+from flask import flash, jsonify, make_response, escape
 from flask import session as login_session
 
 from oauth2client.client import flow_from_clientsecrets
@@ -37,7 +37,7 @@ def catalogRSS():
     """Generates an RSS2.0 Feed for items in the catalog.
 
     This could go two was, but I wan unsure about what would
-    perform better. 
+    perform better.
 
     A) Generating the RSS feed on the fly everytime you hit the
        endpoint. Although I couldn't imagine it being much worse
