@@ -8,6 +8,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
+import dbconfig
 
 Base = declarative_base()
 
@@ -74,5 +75,5 @@ class Item(Base):
             'user_id': self.user_id,
         }
 
-engine = create_engine('sqlite:///itemcatalog.db')
+engine = create_engine(connectionString())
 Base.metadata.create_all(engine)

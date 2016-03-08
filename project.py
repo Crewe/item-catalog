@@ -18,6 +18,7 @@ import random
 import string
 import datetime
 import PyRSS2Gen
+import dbconfig
 
 APPLICATION_NAME = "Item Catalog Application"
 CLIENT_ID = json.loads(
@@ -25,7 +26,7 @@ CLIENT_ID = json.loads(
 HOST = "http://localhost:8000"
 
 app = Flask(__name__)
-engine = create_engine('sqlite:///itemcatalog.db')
+engine = create_engine(connectionString())
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()

@@ -4,9 +4,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Category, User, Item
+import dbconfig
 
 # Create the DB and initialize engine
-engine = create_engine('sqlite:///itemcatalog.db')
+engine = create_engine(connectionString())
 Base.metadata.bind = engine
 
 # Bind session to the engine so db calls are atomic
