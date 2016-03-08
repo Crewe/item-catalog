@@ -26,6 +26,7 @@ CLIENT_ID = json.loads(
 HOST = "http://localhost:8000"
 
 app = Flask(__name__)
+app.secret_key = 'S\xbe\x83U\xd1p{r\xef\xeaT\x96L\xaa\xefb\xd0\x90\xc9\xd1%\xf3\x19\xb8\xe9'
 engine = create_engine(config.connectionString())
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
@@ -464,6 +465,5 @@ def generateRSS():
 
 if __name__ == '__main__':
     # os.urandam(24)
-    app.secret_key = 'S\xbe\x83U\xd1p{r\xef\xeaT\x96L\xaa\xefb\xd0\x90\xc9\xd1%\xf3\x19\xb8\xe9'
     app.debug = True
     app.run(host='0.0.0.0', port=8000)
