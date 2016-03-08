@@ -4,10 +4,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Category, User, Item
-import dbconfig
+import config
 
 # Create the DB and initialize engine
-engine = create_engine(dbconfig.connectionString())
+engine = create_engine(config.connectionString())
 Base.metadata.bind = engine
 
 # Bind session to the engine so db calls are atomic
