@@ -115,7 +115,7 @@ item6 = Item(user_id=1,
              category_id=3,
              name='The Stanley Parable',
              description='The Stanley Parable is an interactive story modification built on the Source game engine, designed by Davey Wreden, and released in July 2011',
-             price='14.99',
+             price='$14.99',
              thumbnail='http://placehold.it/320x150',
              picture='http://placehold.it/173x195')
 session.add(item6)
@@ -126,7 +126,7 @@ item7 = Item(user_id=1,
              category_id=1,
              name='Tiny House by Small Footprint',
              description='A made to order 20 square-meter tiny house on a 2 axel square tube steel trailer. Just add yourself.',
-             price='$48324.32',
+             price='$4834.32',
              thumbnail='http://placehold.it/320x150',
              picture='http://placehold.it/173x195')
 session.add(item7)
