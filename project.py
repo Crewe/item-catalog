@@ -21,8 +21,9 @@ import PyRSS2Gen
 import config
 
 APPLICATION_NAME = "Item Catalog Application"
+CLIENT_SECRETS_PATH = config.clientSecrets()
 CLIENT_ID = json.loads(
-    open(config.clientSecrets(), 'r').read())['web']['client_id']
+    open(CLIENT_SECRETS_PATH, 'r').read())['web']['client_id']
 HOST = "http://localhost:8000"
 
 app = Flask(__name__)
@@ -107,7 +108,7 @@ def googleConnect():
 
     try:
         # Upgrade the authorization code into a credentials object
-        oauth_flow = flow_from_clientsecrets('client_secrets.json', scope='')
+        oauth_flow = flow_from_clientsecrets(CLIENT_SECRETS_PATH, scope='')
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
     except FlowExchangeError:
