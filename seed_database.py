@@ -7,7 +7,7 @@ from database_setup import Base, Category, User, Item
 import dbconfig
 
 # Create the DB and initialize engine
-engine = create_engine(connectionString())
+engine = create_engine(dbconfig.connectionString())
 Base.metadata.bind = engine
 
 # Bind session to the engine so db calls are atomic

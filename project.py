@@ -26,7 +26,7 @@ CLIENT_ID = json.loads(
 HOST = "http://localhost:8000"
 
 app = Flask(__name__)
-engine = create_engine(connectionString())
+engine = create_engine(dbconfig.connectionString())
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()

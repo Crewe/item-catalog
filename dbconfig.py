@@ -6,5 +6,5 @@ username = 'database_user'
 password = 'database_pass'
 
 
-def connectionString:
-    return "postgresql+psycopg2://" + username "+:" + password + "@/" + database
+def connectionString():
+    return "postgresql+psycopg2://" + username + ":" + password + "@/" + database

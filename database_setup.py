@@ -75,5 +75,5 @@ class Item(Base):
             'user_id': self.user_id,
         }
 
-engine = create_engine(connectionString())
+engine = create_engine(dbconfig.connectionString())
 Base.metadata.create_all(engine)
